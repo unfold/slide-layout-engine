@@ -1,0 +1,51 @@
+/* Eric meyers css reset revisited: http://meyerweb.com/eric/thoughts/2011/01/03/reset-revisited/ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }ins { text-decoration: none; } del { text-decoration: line-through; }table { border-collapse: collapse; border-spacing: 0; }
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.section {
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+    .section.current,
+    .section.previous {
+        display: block;
+    }
+
+    .section .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 980px;
+        height: 500px;
+        margin-left: -490px;
+        margin-top: -250px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+
+.scores {}
+    .scores .content {
+        top: 120px;
+        left: 10%;
+        margin: 0;
+        width: 90%;
+    }
