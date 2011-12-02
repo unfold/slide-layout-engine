@@ -6,23 +6,32 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: yellow;
 }
 
 .container {
+    position: relative;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    min-width: 980px;
 }
+    .scroll-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
 .section {
-    background: rgba(0, 0, 0, 0.1);
+    background: #eee;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: none;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
     .section.current,
@@ -31,21 +40,22 @@ html, body {
     }
 
     .section .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 980px;
-        height: 500px;
-        margin-left: -490px;
-        margin-top: -250px;
-        background: rgba(0, 0, 0, 0.1);
+        background: #ddd;
     }
 
 
+.home {}
+    .home .content {
+        width: 980px;
+        margin: 0 auto;
+        height: 600px;
+    }
+
 .scores {}
     .scores .content {
+        position: absolute;
         top: 120px;
-        left: 10%;
+        left: 5%;
         margin: 0;
         width: 90%;
     }
